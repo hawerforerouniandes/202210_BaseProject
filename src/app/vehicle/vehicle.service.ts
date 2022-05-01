@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Vehicle } from './vehicle';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ private apiUrl: string = 'https://gist.githubusercontent.com/josejbocanegra/17bb
 
 constructor(private http: HttpClient) { }
 
-  getVehicles(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+  getVehicles(): Observable<Vehicle[]> {
+    return this.http.get<Vehicle[]>(this.apiUrl);
   }
 
 }
