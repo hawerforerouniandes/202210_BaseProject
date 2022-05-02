@@ -10,6 +10,8 @@ import { VehicleService } from '../vehicle.service';
 export class VehicleListComponent implements OnInit {
 
   vehicles: Array<Vehicle> = [];
+  marcas: Array<string> = [];
+  valores: Array<number> = [];
 
   constructor(private vehicleService: VehicleService) { }
 
@@ -21,6 +23,7 @@ export class VehicleListComponent implements OnInit {
 
   ngOnInit() {
     this.getVehicles();
+
   }
 
 }
