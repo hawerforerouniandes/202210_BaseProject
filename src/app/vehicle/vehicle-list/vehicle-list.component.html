@@ -18,11 +18,10 @@
   </tbody>
 </table>
 <div class="total">
-  <label>Total Renault: </label> 2
-  <br>
-  <label>Total Chevrolet: </label> 3
-  <br>
-  <label>Total Nissan: </label> 1
+  <div *ngFor="let marca of marcas">
+    <label>Total {{marca}}: </label> {{valores[marca]}}
+    <br>
+  </div>
 </div>
 
 
